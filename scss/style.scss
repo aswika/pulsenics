@@ -11,40 +11,40 @@ body{
     margin: 0;
 }
 
-.wrapper{
-
-}
-
-.clearfix{
-    /*content: "";
-    clear: both;
-    display: table;*/
-}
-
 .side-bar{
-    grid-area: side-bar;
-    display: flex;
-    align-items: center;
-    flex-wrap: wrap;
-    flex:1;
-    width: 170px;
-    min-height: 430px;
-    position: sticky;
-    top:0px;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width:170px;
+    z-index: 100;
+    padding: 0;
+    box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
+    height: 100vh;
 
     background: #262845;
-    height: 100vh;
     padding: 0px 0;
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.3), 0px 0px 12px rgba(0, 0, 0, 0.3);
     border-radius: 0px 9px 9px 0px;
 
-    a {
-        position: relative;
+    ul{
+        display: flex;
+        list-style: none;
+        margin: 0;
+        padding:0;
+        height: 100vh;
+    }
+
+    li{
         display: block;
+        padding: .9rem 0rem;
+        align-items: center;
+        text-decoration: none;
+        transition: color .15s ease-in-out,background-color .15s ease-in-out,border-color .15s ease-in-out;
+    }
+
+    a {
         color: white;
-        height: 16px;
-        left: 0px;
-        top: 0px;
         text-decoration: none;
 
         font-family: Helvetica;
@@ -58,6 +58,17 @@ body{
         padding: 0px 30px;
     }
 
+    a:hover{
+        background: #E6E7F2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        color:#262845;
+
+        display: flex;
+        align-items: center;
+        width:fit-content;
+    }
+
 
     img {
         position: relative;
@@ -66,35 +77,46 @@ body{
 
 }
 
+.nav-links{
+    height: 70%;
+}
+
 .company-header{
-    margin: 15px 0;
+    margin: 0 0 25px 0;
 }
 
 .company-logo{
-    position:absolute;
+    display: flex;
     margin: auto;
-    margin: 20px auto;
+    margin-top:20px
+}
+
+.position-sticky{
+    position: -webkit-sticky!important;
+    position: sticky!important;
+    padding-top: 1rem!important;
+    padding-bottom: 1rem;
+}
+
+
+.flex-column {
+    flex-direction: column!important;
 }
 
 .main-content{
-    grid-area:main-content;
-    display:flex;
-    flex:3;
-    flex-direction: column;
-    flex-basis: 100%;
-   height:100vw;
-   margin:0;
+    height:100vw;
+    margin-left: 170px;;
 }
 
-.tab{
+.header{
     position: relative;
     margin:10px;
-    padding: 20px 0;
+    padding: 20px 0 10px 0;
 
     a{
         background: none;
         border: none;
-        text-decoration: underline;
+        text-decoration: none;
         color:rgba(135, 139, 192, 1);
         margin: 10px;
     }
@@ -105,6 +127,49 @@ body{
     }
 }
 
+.title-tab{
+    margin:5px 30px;
+}
+
+.title-name{
+    padding:6px 10px;
+    width:fit-content;
+    background-color: rgba(72, 76, 132, 1);
+    font-family: helvetica;
+    font-size: 12px;
+    color: white;
+    width: 120px;
+    height: 16px;
+    left: 244px;
+    top: 87px;
+    border-radius: 4px 4px 0px 0px;
+}
+
+.circle{
+    display: inline-block;
+    width:10px;
+    height:10px;
+    border-radius:50px;
+    font-size:20px;
+    color:#fff;
+    line-height:100px;
+    background: rgba(77, 221, 204, 1);
+    margin-left: 20px;
+}
+
+.add-button{
+    display: inline-block;
+    margin: 0 20px;
+
+    img{
+        height:10px;
+    }
+}
+
+hr{
+    margin:0 20px;
+}
+
 .summary-box{
     position: relative;
     margin:15px;
@@ -112,16 +177,39 @@ body{
 }
 .box-header{
     position: relative;
-    background-color: rgba(54, 57, 91, 1);
+    background-color: rgba(72, 76, 132, 1);
     color: white;
+    font-family: helvetica;
+    font-size: 12px;;
     border-radius: 4px 4px 0px 0px;
     box-sizing: border-box;
     margin: auto;
-    padding: 10px 0px 10px 30px;
+    padding: 10px 0px 10px 10px;
     border: 1px solid white;
+    border-bottom: none;
 }
 
 .scroll-area{
-    height: 250px;
+    height: fit-content;
     background-color: #262845;
+    border: 1px solid white;
+    border-top: none;
+
+}
+
+.flow-chart{
+    height: 250px;
+}
+
+.tag-input{
+    height: 150px;
+    
+}
+
+.white-input-box{
+    position: relative;
+    z-index:1;
+    background-color: white;
+    height: 100px;
+    margin: 10px;
 }

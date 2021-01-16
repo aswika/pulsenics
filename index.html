@@ -1,36 +1,64 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>FrontEnd Practice</title>
+  <title>Pulsenics</title>
 
   <link rel="stylesheet" type = "text/css" href="scss/style.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body>
     <nav class="side-bar">
-        <a class="company-header" href="#"><img src="images/light-icons/nav-icon-company logo.svg">Company</a>
-        <a href="#"><img src="images/light-icons/nav-icon_dashboard.svg">Dashboard</a>
-        <a href="#"><img src="images/light-icons/nav-icon_experiment.svg">Experiment</a>
-        <a href="#"><img src="images/light-icons/nav-icon_facilities.svg">Facilities</a>
-        <a href="#"><img src="images/light-icons/nav-icon_users.svg">Users</a>
-        <a href="#"><img src="images/light-icons/nav-icon_events.svg">Events</a>
-        <a href="#"><img src="images/light-icons/nav-icon_data.svg">Data</a>
-        <a href="#"><img src="images/light-icons/nav-icon_analytics.svg">Analytics</a>
-        <a href="#"><img src="images/light-icons/nav-icon_settings.svg">Settings</a>
-        <a href="#"><img src="images/light-icons/nav-icon_feedbck.svg">Feedback</a>
-        <img class="company-logo" src="images/light-icons/nav-icon-logo-pulsenics - white.png" alt="company logo">
+      <div class="position-sticky">
+        <ul class="nav flex-column">
+          <li><a class="company-header" href="#"><img src="images/light-icons/nav-icon-company logo.svg">Company</a></li>
+          <div class="nav-links">
+            <li><a href="#"><img src="images/light-icons/nav-icon_dashboard.svg">Dashboard</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_experiment.svg">Experiment</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_facilities.svg">Facilities</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_users.svg">Users</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_events.svg">Events</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_data.svg">Data</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_analytics.svg">Analytics</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_settings.svg">Settings</a></li>
+            <li><a href="#"><img src="images/light-icons/nav-icon_feedbck.svg">Feedback</a></li>
+          </div>
+          <li><img class="company-logo" src="images/light-icons/nav-icon-logo-pulsenics - white.png" alt="company logo"></li>
+        </ul>
+      </div>  
     </nav>
-    
-    <div class="clearfix"></div>
 
     <div class="main-content">
-      <div class="tab">
-        <a class="tablink">Experiments</a>
-        <a class="tablink">Saved Experiments</a>
+      <div class="header">
+        <a class="header-link">Experiments</a>
+        <a class="header-link">Saved Experiments</a>
       </div>
 
-      <div class="summary-box">
+      <div class="title-tab">
+        <a class="title-name">Experiment Title  <div class="circle"></div></a>
+        <div class="add-button"><img src="images\light-icons\Vector.svg" alt=""></div>
+      </div>
+      <hr> 
+
+      <div class="summary-box hardware-selection">
         <div class="box-header">Hardware Selection</div>
+        <div class="scroll-area">
+          <div class="flow-chart">
+
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-box tags">
+        <div class="box-header">Tags</div>
+          <div class="scroll-area">
+          <div class="tag-input">
+            <div class="white-input-box"></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="summary-box visualization">
+        <div class="box-header">Visualization</div>
         <div class="scroll-area"></div>
       </div>
     </div>  

@@ -139,6 +139,199 @@
       </div>
     </div>  
 
+    <!--Set Controls Pop-Up-->
+    <div class="pop-up-overlay"></div>
+    <div class="absolute-container">
+      <div class="controls-container">
+        <!--Probe Selection Dropdown--> 
+        <div>
+          <span id='close'>X</span>
+        <div class="row1">
+          <select>
+            <option value="probe-1">Probe 1</option>
+          <option value="probe-2">Probe 2</option>
+          <option value="probe-3">Probe 3</option>
+          <option value="probe-4">Probe 4</option>
+          </select>
+        </div>
+        <!--Time Setting-->
+        <div class="row2">
+          <label>
+            <p>Time Between Samples:</p>
+            <input type="number" step="1" id="incrementer" min="0" max="" placeholder="0">
+          </label>
+        </div>
+        <!--Mode Selection-->
+        <div class="row3">
+            <p>Mode:</p>
+            <input type="radio" name="Galvanostatic" value="Galvanostatic">
+            <label for="Galvanostatic"><p>Galvanostatic</p></label>
+            <input type="radio" name="Potentiostatic" value="Potentiostatic">
+            <label for="Potentiostatic"><p>Potentiostatic</p></label>
+        </div>
+        <div class="table"> 
+          <!--input table-->
+          <table cellspacing="1">
+            <!--main header row-->
+            <thead>
+              <tr>
+                <th><p>Number</p></th>
+                <th><p>Frequency (Hz)</p></th>
+                <th><p>Amplitude (A)</p></th>
+                <th><p>Reset</p></th>
+              </tr>
+            </thead>
+
+            <tbody>
+            <!--input row 1-->
+              <tr>
+                <th>1</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 2-->
+              <tr>
+                <th>2</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 3-->
+              <tr>
+                <th>3</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 4-->
+              <tr>
+                <th>4</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 5-->
+              <tr>
+                <th>5</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 6-->
+              <tr>
+                <th>6</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 7-->
+              <tr>
+                <th>7</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 8-->
+              <tr>
+                <th>8</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 9-->
+              <tr>
+                <th>9</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+              <!--input row 10 -->
+              <tr>
+                <th>10</th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <input type="text" name="Frequency">
+                </th>
+                <th>
+                  <button class="reset-button">Reset</button>
+                </th>
+              </tr>
+          </tbody>
+          </table>
+        </div>
+        <!--final buttons-->
+        <div class="final-buttons">
+          <div class="send-controls">
+            <button><p>Send Controls</p></button>
+          </div>
+        
+          <div class="stop-sampling">
+            <button><p>Stop Sampling</p></button>
+          </div>
+        </div>
+        
+          
+      </div>
+    </div>
+
+
 
 </body>
 </html>

@@ -1,3 +1,9 @@
+@import url("../fonts/HelveticaNow/stylesheet.css");
+
+$dashboard-background: #36395B;
+$element-background:#262845;
+$main-font: 'Helvetica Now Display';
+
 html{
     font-size: 100%;
     box-sizing: border-box;
@@ -5,10 +11,15 @@ html{
 
 *, *::before, *::after{
     box-sizing: inherit;
+    color:rgba(230, 231, 242, 1);
+    font-family: $main-font;
+    font-size:12px;
 }
+
 body{
-    background: #36395B;
+    background: $dashboard-background;
     margin: 0;
+    min-width: 1100px;
 }
 
 .side-bar{
@@ -22,8 +33,7 @@ body{
     box-shadow: inset -1px 0 0 rgba(0, 0, 0, .1);
     height: 100vh;
 
-    background: #262845;
-    padding: 0px 0;
+    background: $element-background;
     box-shadow: 0px 0px 4px 2px rgba(0, 0, 0, 0.3), 0px 0px 12px rgba(0, 0, 0, 0.3);
     border-radius: 0px 9px 9px 0px;
 
@@ -37,6 +47,7 @@ body{
 
     li{
         display: block;
+        justify-content: space-evenly;
         padding: .9rem 0rem;
         align-items: center;
         text-decoration: none;
@@ -47,7 +58,7 @@ body{
         color: white;
         text-decoration: none;
 
-        font-family: Helvetica;
+        font-family: $main-font, Helvetica;
         font-style:normal;
         
         font-size: 14px;
@@ -58,44 +69,66 @@ body{
         padding: 0px 30px;
     }
 
-    a:hover{
-        background: #E6E7F2;
-        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
-        border-radius: 3px;
-        color:#262845;
-
-        display: flex;
-        align-items: center;
-        width:fit-content;
-    }
-
-
     img {
         position: relative;
         padding: 0 17px 0 0;
     }
 
+    svg {
+        position: relative;
+        margin: 0 17px 0 0 ;
+        fill: #E6E7F2;
+    }
 }
+
 
 .nav-links{
-    height: 70%;
+    align-self: center;
+
+    li{
+        margin:auto;
+    }
+
+    li:hover{
+        position: static;
+        background: #E6E7F2;
+        box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 3px;
+        align-items: center;
+
+        a{
+            color:$element-background;
+            font-weight:600;
+        }
+        svg{
+            fill:$element-background;
+        }
+    }
 }
 
+
+
 .company-header{
-    margin: 0 0 25px 0;
+    margin: 0 0 20px 0;
 }
 
 .company-logo{
     display: flex;
     margin: auto;
-    margin-top:20px
+}
+
+@media (min-height: 600px){
+    .company-logo{
+        display: flex;
+        margin: 0 auto;
+        margin-top: 10px;
+    }
 }
 
 .position-sticky{
     position: -webkit-sticky!important;
     position: sticky!important;
     padding-top: 1rem!important;
-    padding-bottom: 1rem;
 }
 
 
@@ -112,19 +145,28 @@ body{
     position: relative;
     margin:10px;
     padding: 20px 0 10px 0;
-
-    a{
-        background: none;
-        border: none;
-        text-decoration: none;
-        color:rgba(135, 139, 192, 1);
-        margin: 10px;
-    }
         
     a:active{
         color: rgba(80, 209, 226, 1);
         
     }
+}
+
+.header-link{
+    background: none;
+    border: none;
+    text-decoration: none;
+    color:rgba(135, 139, 192, 1);
+    margin: 10px;
+    
+    a{
+        font-family: $main-font, Helvetica;
+    }
+}
+
+.current-page{
+    color: rgba(80, 209, 226, 1);
+    text-decoration: underline;
 }
 
 .title-tab{
@@ -135,7 +177,7 @@ body{
     padding:6px 10px;
     width:fit-content;
     background-color: rgba(72, 76, 132, 1);
-    font-family: helvetica;
+    font-family: $main-font, Helvetica;
     font-size: 12px;
     color: white;
     width: 120px;
@@ -179,7 +221,7 @@ hr{
     position: relative;
     background-color: rgba(72, 76, 132, 1);
     color: white;
-    font-family: helvetica;
+    font-family: $main-font, Helvetica;
     font-size: 12px;;
     border-radius: 4px 4px 0px 0px;
     box-sizing: border-box;
@@ -187,29 +229,397 @@ hr{
     padding: 10px 0px 10px 10px;
     border: 1px solid white;
     border-bottom: none;
+    display: flex;
+    justify-content: space-between;
+
+    img{
+        position: relative;
+        right: 10px;
+    }
+    
 }
 
 .scroll-area{
     height: fit-content;
-    background-color: #262845;
+    background-color: $element-background;
     border: 1px solid white;
     border-top: none;
-
+    box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+    border-radius: 0 0 4px 4px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    scroll-margin: 10px;
+    resize: vertical;
 }
 
+.scroll-area::-webkit-scrollbar{
+    background: $element-background;
+    border: solid 1px $element-background;
+    width: 12px;
+    
+}
+
+.scroll-area::-webkit-scrollbar-thumb{
+    background: rgba(230, 231, 242, 1);
+    border: solid $element-background;
+    width: 12px;
+}
+
+.scroll-area.scroll-area::-webkit-resizer{
+
+}
+    
+
+//box sizes -- change to height:fit content; 
 .flow-chart{
     height: 250px;
 }
 
+.flow-header{
+    position: relative;
+    height: 10%;
+    display: flex;
+    justify-content: space-evenly;
+    text-align: left;
+}
+
+.hardware-selection{
+    input{
+        position: relative;
+        align-self: right;
+        background: #36395B;
+        border-radius: 15px;
+        border-style: none;
+        margin: 10px;
+        padding: 2px 5px;
+
+        outline: none;
+    }
+
+    button{
+        position: absolute;
+        background: none;
+        border-style: none;
+        outline:none;
+
+        margin: 11px;
+    }
+}
+
+.search-bar-container{
+    display: flex;
+    justify-content: flex-end;
+}
+
 .tag-input{
-    height: 150px;
-    
+    display: flex;
+    width: inherit;
+    height: 74px;
+    background: $element-background;
+    overflow: hidden;
+    align-items: center;
 }
 
 .white-input-box{
     position: relative;
-    z-index:1;
-    background-color: white;
-    height: 100px;
-    margin: 10px;
+    width: 97%;
+    height: fit-content;
+    min-height: 65%;
+    background: #E6E7F2;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+    margin: 0 auto;
 }
+
+.tag-search-container{
+
+    input{
+        border: 1px solid #262845;
+        border-radius: 4px;
+        background: none;
+        color: black;
+        margin: 5px;
+        outline: none;
+
+        input:focus{
+            box-sizing: border-box;
+            border-radius: 4px;
+            box-sizing: content-box;
+        }
+    }
+}
+
+
+.tag{
+    display:inline-flex;
+    width: fit-content;
+    margin: 5px;
+
+    p{
+    position: relative;
+    background:rgba(215, 216, 234, 1);
+    color: rgba(54, 57, 91, 1);
+    border-radius: 4px 0 0 4px;
+    padding: 3px 5px;
+    margin: 0;
+    }
+}
+
+.delete-tag{
+    position: relative;
+    display: inline-block;
+    background-color: $element-background;
+    border-radius: 0 4px 4px 0;
+    padding: 3px 5px;
+    margin: 0;
+}
+
+.container{
+    position: relative;
+    margin:15px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.experiment-details{
+    position: relative;
+    display: flex;  
+    width: 65%;
+    background: $element-background;
+    font-family: $main-font;
+    font-size:12px;
+    padding: 6px 15px;
+    border: 1px solid #E6E7F2;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+    border-radius: 4px;
+}
+
+.time{
+    position: relative;
+    width:25%;
+    background: #36395B;
+    border-radius: 4px;
+    color: rgba(135, 139, 192, 1);
+    padding: 5px 10px 5px 5px;
+    white-space: nowrap; //might need to take this out so background doesn't shrink past text (or set min-width)
+
+    span{
+        padding: 10px;
+        margin-right: 10px;
+    }
+}
+
+.percentage-bar{
+    position: relative;
+    width: 35%;
+    background-color: rgba(161, 164, 206, 1);
+    margin: 0 60px;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.percentage-complete{
+    position:relative;
+    width: 10%;
+    height:100%;
+    background-color: #4DDDCC;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
+    p{
+        margin:0 auto;
+        color: $element-background;
+    }
+
+}
+
+.live-status{
+    position: relative;
+    width: 10%;
+    background: rgba(188, 190, 220, 1);
+    border-radius: 16px;
+    text-align: center;
+    align-items: center;
+
+
+    p{
+        margin: 0;
+        padding: 4px;
+        color:$element-background;
+    }
+}
+
+.experiment-buttons{
+    position: relative;
+    display: flex;
+    font-family: $main-font;
+    font-size: 12px;
+    width: 20%;
+    justify-content: space-between;
+    align-items: center;
+}
+.send-controls{
+    padding: 0 10px;
+    color: rgba(230, 231, 242, 1);
+    text-decoration: underline;
+    white-space: nowrap;
+}
+
+.start-button{
+    padding: 5px;
+    background-color: rgba(230, 231, 242, 1);
+    color:rgba(72, 76, 132, 1);
+    text-align: center;
+    width: fit-content;
+    white-space: nowrap;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 4px;
+
+}
+
+
+.graphs-section{
+    height: 400px;
+}
+
+//Saved Experiments Page
+
+.live{
+   height: 150px;
+}
+
+.saved{
+    height: 300px;
+}
+
+.live-experiments .circle{
+    background: white;
+}
+
+.log-column-headers{
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 96%;
+    margin: 0 auto 1px auto;
+
+    p{
+        display: flex;
+        position: relative;
+        margin-top:0;
+        margin-bottom: 0;
+        padding: 0.3rem 0.5rem;
+        color: rgba(135, 139, 192, 1);
+        //white-space: nowrap;
+    }
+
+}
+
+.live-experiments, .saved-experiments{
+    hr{
+        border: 1px solid rgba(135, 139, 192, 0.5);
+    }
+}
+.status-header{
+    position:relative;
+    width: 35%;
+
+}
+
+.date-header{
+    position:relative;
+    width: 12%;
+    margin-right: 0px;
+}
+
+.log{
+    position: relative; 
+    display: flex;
+    background-color: $dashboard-background;
+    margin: 0 auto 1px auto;
+    
+    border-radius: 4px;
+    justify-content: space-between;
+    width: 96%;
+
+    p{
+        display: flex;
+        position: relative;
+        border-left: 1px solid $element-background;
+        margin: 0;
+        padding: 0.3rem 0.5rem;
+        font-weight: 300;
+        //white-space: nowrap;
+    }
+
+    a{
+        display: flex;
+        position: relative;
+        padding: 0 5px;
+        margin:0 10px 0 0;
+    }
+}
+
+.line-spacing{
+    padding-top:10px;
+}
+
+.status-bar{
+    width: 15%;
+    background-color: rgba(161, 164, 206, 1);
+    display: flex;
+    border-left: 1px solid $element-background;
+    margin: 0;
+    vertical-align: center;
+    margin: 0.25rem 1rem;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+}
+
+.percentage-status{
+    position:relative;
+    width: 20%;
+    height:100%;
+    background-color: #4DDDCC;
+    box-shadow: inset 0px 1px 1px rgba(0, 0, 0, 0.25);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+
+
+    p{
+        font-size: 10px;
+        font-weight: 500;
+        line-height: 8px;
+        border-left: none;
+        padding: 0;
+        margin: auto;
+        color: $element-background;
+    }
+
+}
+
+.status-complete{
+    display: flex; 
+    width:19%;
+    border-left: 1px solid #262845;
+    border-right: 1px solid #262845;
+
+    p{
+        display: flex;
+        margin: 0 auto;
+        border-left: none;
+    }
+}
+
+.button-container{
+    width: 96%;
+    margin: 40px auto;
+    display: flex;
+    justify-content: flex-end;
+}
+
+

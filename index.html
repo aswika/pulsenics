@@ -144,8 +144,7 @@
     <div class="absolute-container">
       <div class="controls-container">
         <!--Probe Selection Dropdown--> 
-        <div>
-          <span id='close'>X</span>
+        <span id='close'>X</span>
         <div class="row1">
           <select>
             <option value="probe-1">Probe 1</option>
@@ -318,7 +317,7 @@
         </div>
         <!--final buttons-->
         <div class="final-buttons">
-          <div class="send-controls">
+          <div class="send-button">
             <button><p>Send Controls</p></button>
           </div>
         
@@ -326,10 +325,54 @@
             <button><p>Stop Sampling</p></button>
           </div>
         </div>
-        
-          
       </div>
     </div>
+
+    <!--START EXPERIMENT POP-UP-->
+    <div class="pop-up-overlay"></div>
+    <div class="absolute-container"></div>
+      <div class="start-experiment-container">
+        <span id='close'>x</span>
+        <h1>Start Experiment</h1>
+        <table>
+          <thead>
+            <tr>
+            <th>Start</th>
+            <th>End</th>
+          </tr>
+          </thead>
+          
+          <tr>
+            <th>
+              <input type="date" placeholder="current-date"> 
+              <input type="time">
+            </th>
+            <th>
+              <input type="date"> 
+              <input type="time">
+            </th>
+          </tr>
+
+          <tr>
+            <th>
+              <input type="checkbox" name="start-now" value="start-now">
+              <label for="start-now">Start Now</label>
+            </th>
+            <th>
+              <input type="checkbox" name="end-time" value="end-time">
+              <label for="end-time">No specified end time</label>
+            </th>
+          </tr>
+        </table>
+
+        <div class="start-experiment-popup-button">
+          <button class="start-button">Start Experiment</button>
+        </div>
+        
+
+      </div>
+    </div>
+
 
 
 

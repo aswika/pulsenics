@@ -293,7 +293,7 @@ hr{
     width: inherit;
     display:flex;
     padding: 0 5px 0 15px;
-    margin-bottom: 20px;
+    margin: 5px 0 20px 0;
 }
 
 
@@ -328,7 +328,6 @@ hr{
     padding: 5px 5px 0 5px;
     box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 4px;
-    margin: 5px 0;
     min-height:40px;
 
     input{
@@ -1032,4 +1031,74 @@ hr{
         margin-bottom: 10px;
         
     }
+}
+
+.probe-dropdown-container{
+    background-color: rgba(230, 231, 242, 1);
+    border-radius: 4px;
+}
+.probe-name{
+    position: relative;
+    display:flex;
+    background: #D7D8EA;
+    border-radius: 4px;
+    justify-content: space-between;
+    padding: 3px 5px;
+    margin: 5px 3px;
+    color:#262845;
+
+    input{
+        border-radius: 4px;
+        width: 50%;
+        color: #A1A4CE;
+        border:none;
+        background-color: rgba(230, 231, 242, 1);
+    }
+}
+
+.serial-number{
+    display:flex;
+    justify-content: space-between;
+    padding: 3px 8px;
+    
+    p{
+        color:#A1A4CE;
+        margin:0;
+    }
+}
+
+.cmu-dropdown-container{
+    background-color: rgba(230, 231, 242, 1);
+    border-radius: 4px;
+}
+
+.cell-selection{
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 5px;
+}
+
+.cell{
+    display: flex;
+    justify-content: space-evenly;
+    width: 32%;
+    margin: 5px 0px;
+    background: #D7D8EA;
+    border-radius: 4px;
+
+    p{
+        margin: auto;
+        color:#262845;
+    }
+}
+
+.name{
+    width: 60%;
+    outline: none;
+    margin: 2px;
+    color: #A1A4CE;
+    border-radius: 4px;
+    border:none;
+    background-color: rgba(230, 231, 242, 1);
 }

@@ -84,28 +84,29 @@
           
           <div class="flow-chart">
             <div class="flow-header">   
-              <!--<p>Facilities</p>
-              <p>Test Stations</p>
-              <p>Probes</p>
-              <p>Channels</p> -->
+            <p class="facility">Facilities</p>
+            <p class="test-station">Test Stations</p>
+            <p class="probe">Probes</p>
+            <p class="cmu">Channels</p>
             </div>
 
             <div class="tree">
               <div class="facility box">
-                <div class = box-text>
+                <div class = "box-text">
                   Facility
                   <input type="checkbox">
                 </div>
-                
               </div>
+              <div class="line"></div>
               <div class="test-station box">
                 <div class = box-text>
                   Test Station
                   <input type="checkbox">
                 </div>
               </div>
+              <div class="line"></div>
               <div class="probe box">
-                <div class = box-text>
+                <div class = "box-text">
                   Probe
                   <input type="checkbox">
                 </div>
@@ -115,8 +116,9 @@
                   </svg>
                 </div>
               </div>
+              <div class="line"></div>
               <div class="cmu box">
-                <div class = box-text>
+                <div class = "box-text">
                   CMU
                   <input type="checkbox">
                 </div>
@@ -125,9 +127,21 @@
                   <path d="M10 13L16 7.33198L14.59 6L10 10.3266L5.41 6L4 7.33198L10 13Z" fill="#E6E7F2"/>
                   </svg>
                 </div>
-                
               </div>
             </div>
+          
+            <div class="tree">
+              <div class="facility">
+              </div>
+                <div></div>
+                <div class="test-station box">
+                  <div class = box-text>
+                    Test Station
+                    <input type="checkbox">
+                  </div>
+                </div>
+            </div>
+
           </div>
         </div>
       </div>
@@ -175,8 +189,7 @@
         </div>
         <div class="scroll-area">
           <div class="graphs-section"></div>
-      </div>
-    </div>  
+      </div>  
 
     <!--Set Controls Pop-Up-->
     <div class="pop-up-overlay"></div>
@@ -228,7 +241,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -241,7 +254,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -254,7 +267,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -267,7 +280,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -280,7 +293,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -293,7 +306,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -306,7 +319,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -319,7 +332,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -332,7 +345,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -345,7 +358,7 @@
                   <input type="text" name="Frequency">
                 </th>
                 <th>
-                  <input type="text" name="Frequency">
+                  <input type="text" name="Amplitude">
                 </th>
                 <th>
                   <button class="reset-button">Reset</button>
@@ -410,8 +423,106 @@
       </div>
     </div>
 
+    <!--Visualization Pop UP-->
+    <div class="pop-up-overlay"></div>
+    <div class="absolute-container"></div>
+      <div class="visualization-container">
+        <span id='close'>X</span>
+        <div class="flow-container">
+          <div class="flow-header">
+            <p class="facility">Facilities</p>
+            <p class="test-station">Test Stations</p>
+            <p class="probe">Probes</p>
+            <p class="cmu">Channels</p>
+          </div>
+          <div class="tree">
+              <div class="facility box">
+                <div class = "box-text">
+                  Facility
+                  <input type="checkbox">
+                </div>
+                <div class="dropdown-arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 13L16 7.33198L14.59 6L10 10.3266L5.41 6L4 7.33198L10 13Z" fill="#E6E7F2"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="test-station box">
+                <div class = box-text>
+                  Test Station
+                  <input type="checkbox">
+                </div>
+                <div class="dropdown-arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 13L16 7.33198L14.59 6L10 10.3266L5.41 6L4 7.33198L10 13Z" fill="#E6E7F2"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="probe box">
+                <div class = "box-text">
+                  Probe
+                  <input type="checkbox">
+                </div>
+                <div class="dropdown-arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 13L16 7.33198L14.59 6L10 10.3266L5.41 6L4 7.33198L10 13Z" fill="#E6E7F2"/>
+                  </svg>
+                </div>
+              </div>
+              <div class="line"></div>
+              <div class="cmu box">
+                <div class = "box-text">
+                  CMU
+                  <input type="checkbox">
+                </div>
+                <div class="dropdown-arrow">
+                  <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M10 13L16 7.33198L14.59 6L10 10.3266L5.41 6L4 7.33198L10 13Z" fill="#E6E7F2"/>
+                  </svg>
+                </div>
+              </div>
+            </div>
+        </div>
+        <div class="graph-selection">
+          <table>
+            <thead>
+              <tr class="selection-header">
+                <th>Electrochemical Data</th>
+                <th colspan="3">Frequency Domain Data</th>
+                <th>Time Domain Data</th>
+              </tr>
+          </thead>
 
 
+            <tr>
+              <td><input type="checkbox">Electrolyte Resistance</td>
+              <td><input type="checkbox">Bode Plot (Imedence Magnitude)</td>
+              <td><input type="checkbox">Bode Plot (Voltage Phase)</td>
+              <td><input type="checkbox">Bode Plot (Current Magnitude)</td>
+              <td><input type="checkbox">Voltage</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox">Interfacial Capacitor</td>
+              <td><input type="checkbox">Bode Plot (Voltage Magnitude)</td>
+              <td><input type="checkbox">Bode Plot (Current Phase)</td>
+              <td><input type="checkbox">Phase Difference</td>
+              <td><input type="checkbox">Current</td>
+            </tr>
+
+            <tr>
+              <td><input type="checkbox">Average Power Consumption</td>
+              <td><input type="checkbox">Nyquist Plot</td>
+            </tr>
+          </table>
+        </div>
+        <div class="visualization-button">
+          <button class="start-button">Add Visualization</button>
+        </div>
+      </div>
+    </div>
 
 </body>
 </html>

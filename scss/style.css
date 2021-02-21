@@ -848,6 +848,7 @@ hr {
 }
 
 .absolute-container {
+  visibility: hidden;
   position: absolute;
   top: 0;
   left: 0;
@@ -1449,5 +1450,336 @@ td {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
   border: none;
+}
+
+.analytics-plot-container {
+  visibility: hidden;
+  position: -webkit-sticky;
+  position: sticky;
+  margin: auto;
+  top: 2%;
+  bottom: 10%;
+  left: 25%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #262845;
+  border-radius: 6px;
+  padding: 5px;
+  font-weight: 300;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  z-index: 2;
+  padding-left: 15px;
+}
+
+.analytics-plot-container span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.analytics-plot-container h1 {
+  font-size: 18px;
+  font-weight: normal;
+  margin: 0 auto;
+}
+
+.analytics-plot-container p {
+  color: #878BC0;
+  margin-bottom: 0;
+}
+
+.analytics-plot-container label {
+  color: white;
+}
+
+.analytics-plot-container input {
+  background: #484C84;
+  -webkit-box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.15), inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+          box-shadow: inset 0px 0px 6px 2px rgba(0, 0, 0, 0.15), inset 0px 4px 4px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  border: none;
+  margin-top: 5px;
+}
+
+.analytics-plot-container select {
+  background-color: #484C84;
+  margin-top: 5px;
+}
+
+.select-header {
+  background: #484C84;
+  color: #E6E7F2;
+}
+
+.select-option {
+  background: #E6E7F2;
+  color: #484C84;
+}
+
+#analytics-notes {
+  width: 275px;
+  height: 75px;
+  margin: 5px 10px 5px 0;
+}
+
+.save-event-button {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 10px 10px 10px 0;
+}
+
+.save-event-button button {
+  border: none;
+  padding: 5px 10px;
+}
+
+.saved-analysis table {
+  width: 100%;
+}
+
+.saved-analysis table td {
+  border: 1px solid #262845;
+  background: #36395B;
+  border-radius: 4px;
+  padding: 3px 5px;
+}
+
+.saved-analysis table th {
+  text-align: left;
+  border-bottom: solid 1px #878BC0;
+}
+
+.saved-analysis table th p {
+  color: #878BC0;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.saved-analysis table tbody:before {
+  content: "@";
+  display: block;
+  line-height: 10px;
+  text-indent: -99999px;
+}
+
+.saved-analysis button {
+  position: absolute;
+  background: none;
+  border-style: none;
+  outline: none;
+  margin: 11px;
+}
+
+.analysis-search {
+  background: #36395B;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px;
+  padding: 2px 5px;
+  outline: none;
+}
+
+.icon-column {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.table-name {
+  width: 25%;
+}
+
+.table-description {
+  width: 35%;
+}
+
+.start-new-analysis {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  margin: 20px 15px;
+}
+
+.start-new-analysis button {
+  border: none;
+  padding: 6px 8px;
+}
+
+.users table {
+  width: 100%;
+}
+
+.users table td {
+  border: 1px solid #262845;
+  background: #1D1F35;
+  border-radius: 4px;
+  padding: 3px 5px;
+  text-align: center;
+}
+
+.users table th {
+  text-align: center;
+  border-bottom: solid 1px #878BC0;
+}
+
+.users table th p {
+  color: #878BC0;
+  margin-bottom: 0;
+  font-weight: 300;
+}
+
+.users table tbody:before {
+  content: "@";
+  display: block;
+  line-height: 10px;
+  text-indent: -99999px;
+}
+
+.users table svg {
+  width: 50%;
+  height: auto;
+}
+
+.user-profile {
+  width: 5%;
+}
+
+.online-status {
+  padding: 10px;
+}
+
+.online-status p {
+  padding: 5px 5px;
+  background: #4DDDCC;
+  border-radius: 16px;
+  color: #36395B;
+}
+
+.back-arrow {
+  margin: 20px;
+}
+
+.edit-user-container {
+  width: 95%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  margin: auto;
+  background: #3D4066;
+  -webkit-box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+          box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+  border-radius: 12px;
+}
+
+.profile-info-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.profile-status {
+  width: 20%;
+  margin: 20px;
+  padding-left: 10px;
+}
+
+.edit {
+  margin: 5px;
+}
+
+.online {
+  width: 40%;
+  padding: 5px 5px;
+  background: #4DDDCC;
+  border-radius: 16px;
+  color: #36395B;
+  text-align: center;
+  margin: 10px 0;
+}
+
+.profile-picture {
+  display: block;
+  margin: 10px 0;
+}
+
+.user-info {
+  margin: auto 0;
+}
+
+.user-info input {
+  display: block;
+  background: #E6E7F2;
+  border-radius: 4px;
+  border: none;
+  margin: 5px;
+  padding: 2px 5px;
+}
+
+.permissions {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.permissions h1 {
+  width: 95%;
+  -ms-flex-preferred-size: 100%;
+      flex-basis: 100%;
+  margin: 20px 3%;
+  border-bottom: 1px solid white;
+  padding-bottom: 5px;
+}
+
+.permission-checkbox {
+  width: 25%;
+  margin: 20px;
+}
+
+.permission-checkbox h2 {
+  display: inline;
+  margin-left: 5px;
+}
+
+.permission-checkbox label {
+  font-weight: 400;
+}
+
+.permission-checkbox p {
+  line-height: 20px;
+  color: #BCBEDC;
+  margin-left: 20px;
+}
+
+.save-changes {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+.save-changes button {
+  border: none;
+  margin: 20px;
 }
 /*# sourceMappingURL=style.css.map */

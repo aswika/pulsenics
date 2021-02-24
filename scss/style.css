@@ -1782,4 +1782,44 @@ td {
   border: none;
   margin: 20px;
 }
+
+.facilities button {
+  position: absolute;
+  background: none;
+  border-style: none;
+  outline: none;
+  margin: 11px;
+}
+
+.facilities-search {
+  background: #36395B;
+  border-radius: 15px;
+  border-style: none;
+  margin: 10px;
+  padding: 2px 5px;
+  outline: none;
+}
+
+.tab-section {
+  border-bottom: 1px solid #BCBEDC;
+  padding: 8px 0;
+}
+
+.tab-name {
+  border-radius: 4px 4px 0px 0px;
+  padding: 8px 18px;
+  margin: 8px 0;
+}
+
+.selected-tab {
+  background: #484C84;
+}
+
+.unselected-tab {
+  background: #BCBEDC;
+}
+
+.tab {
+  display: inline-block;
+}
 /*# sourceMappingURL=style.css.map */

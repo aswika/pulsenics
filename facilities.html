@@ -75,197 +75,417 @@
 
     <!--Facilites Pop-up-->
     <div class="pop-up-overlay"></div>
-    <div class="absolute-container"></div>
-        <div class="current-controls-container">
-            <div class="tab-section">
-                <div class="tab">
-                    <a class="tab-name selected">Current Controls </a>
+    <div class="absolute-container">
+        <div class="facilities-pop-up">
+            <div class="current-controls-container">
+                <div class="tab-section">
+                    <div class="tab">
+                        <a class="tab-name selected">Current Controls </a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Controls History</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Alerts</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Maintenance Reset Logs</a>
+                    </div>
                 </div>
-                <div class="tab">
-                    <a class="tab-name unselected-tab">Controls History</a>
-                </div>
-                <div class="tab">
-                    <a class="tab-name unselected-tab">Alerts</a>
-                </div>
-                <div class="tab">
-                    <a class="tab-name unselected-tab">Maintenance Reset Logs</a>
-                </div>
-            </div>
 
-            <div class="time-selection">
-                <label>
-                    <p>Time Between Samples:</p>
-                    <input type="number" step="1" id="incrementer" min="0" max="" placeholder="0">
-                </label>
-            </div>
+                <div class="time-selection">
+                    <label>
+                        <p>Time Between Samples:</p>
+                        <input type="number" step="1" id="incrementer" min="0" max="" placeholder="0">
+                    </label>
+                </div>
 
-            <div class="mode-selection">
-                <p>Mode:</p>
-                <input type="radio" name="Galvanostatic" value="Galvanostatic">
-                <label for="Galvanostatic"><p>Galvanostatic</p></label>
-                <input type="radio" name="Potentiostatic" value="Potentiostatic">
-                <label for="Potentiostatic"><p>Potentiostatic</p></label>
-            </div>
+                <div class="mode-selection">
+                    <p>Mode:</p>
+                    <input type="radio" name="Galvanostatic" value="Galvanostatic">
+                    <label for="Galvanostatic"><p>Galvanostatic</p></label>
+                    <input type="radio" name="Potentiostatic" value="Potentiostatic">
+                    <label for="Potentiostatic"><p>Potentiostatic</p></label>
+                </div>
 
-            <div class="table"> 
-                <!--input table-->
+                <div class="table"> 
+                    <!--input table-->
+                    <table cellspacing="1">
+                    <!--main header row-->
+                    <thead>
+                        <tr>
+                        <th><p>Number</p></th>
+                        <th><p>Frequency (Hz)</p></th>
+                        <th><p>Amplitude (A)</p></th>
+                        <th><p>Reset</p></th>
+                        </tr>
+                    </thead>
+        
+                    <tbody>
+                    <!--input row 1-->
+                        <tr>
+                        <th>1</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 2-->
+                        <tr>
+                        <th>2</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 3-->
+                        <tr>
+                        <th>3</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 4-->
+                        <tr>
+                        <th>4</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 5-->
+                        <tr>
+                        <th>5</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 6-->
+                        <tr>
+                        <th>6</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 7-->
+                        <tr>
+                        <th>7</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 8-->
+                        <tr>
+                        <th>8</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 9-->
+                        <tr>
+                        <th>9</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                        <!--input row 10 -->
+                        <tr>
+                        <th>10</th>
+                        <th>
+                            <input type="text" name="Frequency">
+                        </th>
+                        <th>
+                            <input type="text" name="Amplitude">
+                        </th>
+                        <th>
+                            <button class="reset-button">Reset</button>
+                        </th>
+                        </tr>
+                    </tbody>
+                    </table>
+                </div>
+
+                <div class="final-buttons">
+                    <div class="send-button">
+                    <button><p>Send Controls</p></button>
+                    </div>
+                
+                    <div class="stop-sampling">
+                    <button><p>Stop Sampling</p></button>
+                    </div>
+                </div>
+            </div>    
+            
+
+            <div class="controls-history-container">
+                <div class="tab-section">
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Send Controls To Probe </a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name selected-tab">Controls History</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Alerts</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Maintenance Reset Logs</a>
+                    </div>
+                </div>
+                
                 <table cellspacing="1">
-                  <!--main header row-->
-                  <thead>
-                    <tr>
-                      <th><p>Number</p></th>
-                      <th><p>Frequency (Hz)</p></th>
-                      <th><p>Amplitude (A)</p></th>
-                      <th><p>Reset</p></th>
-                    </tr>
-                  </thead>
-      
-                  <tbody>
-                  <!--input row 1-->
-                    <tr>
-                      <th>1</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 2-->
-                    <tr>
-                      <th>2</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 3-->
-                    <tr>
-                      <th>3</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 4-->
-                    <tr>
-                      <th>4</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 5-->
-                    <tr>
-                      <th>5</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 6-->
-                    <tr>
-                      <th>6</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 7-->
-                    <tr>
-                      <th>7</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 8-->
-                    <tr>
-                      <th>8</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 9-->
-                    <tr>
-                      <th>9</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                    <!--input row 10 -->
-                    <tr>
-                      <th>10</th>
-                      <th>
-                        <input type="text" name="Frequency">
-                      </th>
-                      <th>
-                        <input type="text" name="Amplitude">
-                      </th>
-                      <th>
-                        <button class="reset-button">Reset</button>
-                      </th>
-                    </tr>
-                </tbody>
+                    <thead>
+                        <tr>
+                        <th><p>Sent Date</p></th>
+                        <th><p>Time Between Sample(s)</p></th>
+                        <th><p>Mode</p></th>
+                        <th><p>Frequency</p></th>
+                        <th><p>Amplitude</p></th>
+                        <th><p>Sent to Probe</p></th>
+                        <th><p>Duplicate</p></th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                        <td>9:45PM 16/16/91</td>
+                        <td>1</td>
+                        <td>Galvanostatic</td>
+                        <td>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </td>
+                        <td>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </td>
+                        <td><div class="circle"></div></td>
+                        <td>
+                            <a href="#"><img src="images/light-icons/duplicate-icon.svg"></a>
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td>9:45PM 16/16/91</td>
+                        <td>1</td>
+                        <td>Galvanostatic</td>
+                        <td>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </td>
+                        <td>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </td>
+                        <td><div class="circle"></div></td>
+                        <td>
+                            <a href="#"><img src="images/light-icons/duplicate-icon.svg"></a>
+                        </td>
+                        </tr>
+
+                        <tr>
+                        <td>9:45PM 16/16/91</td>
+                        <td>1</td>
+                        <td>Galvanostatic</td>
+                        <td>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </td>
+                        <td>
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                            <input type="text">
+                        </td>
+                        <td><div class="circle"></div></td>
+                        <td>
+                            <a href="#"><img src="images/light-icons/duplicate-icon.svg"></a>
+                        </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        
+
+            <div class="alerts-container">
+                <div class="tab-section">
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Send Controls To Probe</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Controls History</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name selected-tab">Alerts</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Maintenance Reset Logs</a>
+                    </div>
+                </div>
+
+                <table cellspacing="1">
+                    <thead>
+                        <tr>
+                        <th class="table-alerts"><p>Alert</p></th>
+                        <th class="table-event-type"><p>Event Type</p></th>
+                        <th><p>Date Triggered</p></th>
+                        <th class="table-notes"><p>Notes</p></th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                        <td>Alert</td>
+                        <td>Event Type</td>
+                        <td>9:45PM 16/16/91</td>
+                        <td>Test</td>
+                        </tr>
+
+                        <tr>
+                        <td>Alert</td>
+                        <td>Event Type</td>
+                        <td>9:45PM 16/16/91</td>
+                        <td>Test</td>
+                        </tr>
+
+                        <tr>
+                        <td>Alert</td>
+                        <td>Event Type</td>
+                        <td>9:45PM 16/16/91</td>
+                        <td>Test</td>
+                        </tr>
+                    </tbody>
                 </table>
             </div>
 
-            <div class="final-buttons">
-                <div class="send-button">
-                  <button><p>Send Controls</p></button>
+            <div class="maintenance-reset-container">
+                <div class="tab-section">
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Send Controls to Probe</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Controls History</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name unselected-tab">Alerts</a>
+                    </div>
+                    <div class="tab">
+                        <a class="tab-name selected-tab">Maintenance Reset Logs</a>
+                    </div>
                 </div>
-              
-                <div class="stop-sampling">
-                  <button><p>Stop Sampling</p></button>
-                </div>
-            </div>
+
+                <table cellspacing="1">
+                    <thead>
+                        <tr>
+                        <th><p>Change Date</p></th>
+                        <th><p>By</p></th>
+                        <th><p>On</p></th>
+                        <th class="table-reason"><p>Reason</p></th>
+                        </tr>
+                    </thead>
             
+                    <tbody>
+                        <tr>
+                            <td>8:00PM 16/16/91</td>
+                            <td>Pulsenics (Admin)</td>
+                            <td>9:45PM 16/16/91</td>
+                            <td>Test</td>
+                        </tr>
+
+                        <tr>
+                            <td>8:00PM 16/16/91</td>
+                            <td>Pulsenics (Admin)</td>
+                            <td>9:45PM 16/16/91</td>
+                            <td>Test</td>
+                        </tr>
+
+                        <tr>
+                            <td>8:00PM 16/16/91</td>
+                            <td>Pulsenics (Admin)</td>
+                            <td>9:45PM 16/16/91</td>
+                            <td>Test</td>
+                        </tr>
+
+                        <tr>
+                            <td>8:00PM 16/16/91</td>
+                            <td>Pulsenics (Admin)</td>
+                            <td>9:45PM 16/16/91</td>
+                            <td>Test</td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+
         </div>
+    </div>
 
 
     </div>

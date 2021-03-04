@@ -855,6 +855,7 @@ hr{
     left:0;
     width:100%;
     height: inherit;
+    z-index: 2;
 }
 .controls-container{
     visibility: hidden;
@@ -1925,4 +1926,181 @@ hr{
 
 .table-reason{
     width: 50%;
+}
+
+//SETTINGS PAGE
+
+.settings-container{
+    background: #3D4066;
+    box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+    border-radius: 12px;
+    width:95%;
+    height: 90vh;
+    //position:sticky;
+    top: 20px;
+    margin: 20px;
+    overflow-y: hidden;
+
+    padding: 20px;
+
+    h1{
+        font-size: 24px;
+        margin-top: 0;
+    }
+
+    h2{
+        font-size: 16px;
+    }
+
+    p{
+        font-size: 12px;
+    }
+
+    a{
+        color: #73DAE8;
+    }
+}
+
+.password-settings{
+    p{
+        color: #D7D8EA;
+        margin-top: 2px;
+    }
+}
+
+.settings-info{
+    margin: 30px 0;
+}
+
+.contact-us{
+
+    p{
+        display: inline-flex;
+        vertical-align: auto;
+        margin-left: 10px;
+    }
+    
+}
+
+.phone, .email{
+    display: flex;
+    align-items: center;
+}
+
+.password-reset-popup{
+    background: #262845;
+    border: 1px solid #E6E7F2;
+    box-sizing: border-box;
+    box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+    border-radius: 4px;
+
+    width: 30%;
+    margin: 30vh 40vw;
+    z-index: 3;
+    padding: 5px;
+
+    span{
+        display: flex;
+        justify-content: flex-end;
+        font-size: 10px;
+    }
+
+    h2{
+        margin-top: 0;
+        margin-left: 10px;
+    }
+
+    p{
+        text-align: center;
+    }
+
+    input, button{
+        display: block;
+        margin: auto;
+        text-align: center;
+    }
+
+    input{
+        color: black;
+    }
+
+    input:focus{
+        outline:none;
+    }
+
+    button{
+        background: #1DA1B2;
+        border-radius: 4px;
+        margin: 10px auto 30px auto;
+        border: none;
+    }
+}
+
+//FEEDBACK PAGE
+.feedback-container{
+    background: #3D4066;
+    box-shadow: 0px 4px 12px rgba(9, 10, 16, 0.25);
+    border-radius: 12px;
+    width:95%;
+    min-height: 90vh;
+    height: fit-content;
+    //position:sticky;
+    top: 20px;
+    margin: 20px;
+    overflow-y: hidden;
+
+    padding: 20px;
+
+    form{
+        width: 50%;
+        margin:auto;
+    }
+
+    select{
+        width: 47%;
+        margin: 10px 6px;
+        color: #C2C2C2;
+    }
+
+    input, textarea, select{
+        background: linear-gradient(180deg, #E4E4E4 0%, #ECECEC 100%);
+        border: 1px solid #D2D2D2;
+        box-sizing: border-box;
+        box-shadow: inset 0px 2px 4px rgba(0, 0, 0, 0.25);
+        border-radius: 5px;
+        margin: 10px 5px;
+        padding: 5px;
+    }
+
+    button{
+        background:none;
+        border:none;
+    }
+
+    input[type=submit]{
+        background: #D6D6D6;
+        border-radius: 5px;
+        padding: 5px 15px;
+        border: none;
+        color:white;
+        margin: 10px 0;
+    }
+}
+
+#name-input, #email-input, #subject-input, #feedback-input{
+    width: 100%;
+    color:black;
+}
+
+#feedback-input{
+    overflow-x: hidden;
+    display: flex;
+    vertical-align: text-top;
+    resize: vertical;
+}
+
+.feedback-buttons{
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
 }

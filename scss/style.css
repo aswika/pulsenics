@@ -2542,4 +2542,229 @@ td {
           box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   border-radius: 4px;
 }
+
+/*Repl upload >*/
+.upload-button {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  position: absolute;
+  right: 5px;
+  margin: 0 15px;
+}
+
+.upload-button button {
+  border: none;
+}
+
+.upload-button p {
+  color: #262845;
+  display: inline-block;
+  vertical-align: middle;
+  margin: 0 15px 0 15px;
+}
+
+.upload-image {
+  display: inline-block;
+  vertical-align: middle;
+}
+
+.live-data table {
+  border: none;
+  border: 1px solid #262845;
+  white-space: nowrap;
+  text-align: left;
+  width: 100%;
+}
+
+.live-data table thead p {
+  font-weight: 300;
+  color: #878BC0;
+  border-bottom: 1px solid #878BC0;
+}
+
+.live-data table td {
+  margin: 2px;
+  padding: 6px 5px;
+}
+
+.live-data table tbody {
+  background: #36395B;
+}
+
+.live-data table span {
+  color: #262845;
+}
+
+.header-circle {
+  background-color: white;
+}
+
+.status {
+  width: 5%;
+  text-align: center;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.live-data.data-end-date {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.data-start-date, .data-end-date {
+  width: 15%;
+}
+
+.filters-text-input {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.filters-input {
+  width: 15%;
+}
+
+.filters-input input {
+  width: 100%;
+}
+
+.filters-input p {
+  display: block;
+  width: 100%;
+}
+
+.filters-date input {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+}
+
+.data table {
+  border: none;
+  border: 1px solid #262845;
+  white-space: nowrap;
+  text-align: left;
+  width: 100%;
+}
+
+.data table thead p {
+  font-weight: 300;
+  color: #878BC0;
+  border-bottom: 1px solid #878BC0;
+}
+
+.data table td {
+  margin: 2px;
+  padding: 6px 5px;
+}
+
+.data table tbody {
+  background: #36395B;
+}
+
+.data table span {
+  color: #262845;
+}
+
+.type {
+  width: 8%;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.type-data {
+  text-align: center;
+}
+
+.data-experiment {
+  width: 20%;
+}
+
+.tags table {
+  border: none;
+  border: 1px solid #262845;
+  white-space: nowrap;
+  text-align: left;
+  width: 100%;
+  margin-top: 20px;
+  color: #E6E7F2;
+}
+
+.tags table thead p {
+  font-weight: 300;
+  color: #878BC0;
+  border-bottom: 1px solid #878BC0;
+}
+
+.tags table td {
+  margin: 2px;
+  padding: 6px 5px;
+}
+
+.tags table tbody {
+  background: #36395B;
+}
+
+.tags table span {
+  color: #262845;
+}
+
+.tags button {
+  position: absolute;
+  background: none;
+  border-style: none;
+  outline: none;
+  margin: 7px;
+}
+
+.tags-search {
+  position: absolute;
+  background: #36395B;
+  border-radius: 15px;
+  border-style: none;
+  margin: 5px;
+  padding: 2px 5px;
+  outline: none;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+}
+
+.tags-button {
+  bottom: 10px;
+  right: 10px;
+  position: absolute;
+}
+
+.tags-button button {
+  color: #484C84;
+  border: none;
+  position: relative;
+  background: #E6E7F2;
+  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 4px;
+  padding: 5px 15px;
+}
+
+.tag-name {
+  width: 20%;
+  border-radius: 4px 0px 0px 4px;
+}
+
+.tag-notes {
+  width: 50%;
+}
+
+.tag-delete, .tag-edit {
+  width: 8%;
+}
+
+.tag-delete {
+  border-radius: 0px 4px 4px 0px;
+}
+
+.tag-edit-icon, .tag-delete-icon {
+  display: block;
+  margin: auto;
+}
 /*# sourceMappingURL=style.css.map */

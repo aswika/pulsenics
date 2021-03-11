@@ -60,51 +60,123 @@
   </nav>
 
     <div class="main-content">
+      <div class="header">
+        <a class="header-link current-page">Events</a>
+        <a class="header-link" href="labels.html">Labels</a>
+      </div>
 
-      <div class="summary-box users">
-        <div class="box-header">
-          Users
-          <img src="images/light-icons/open-close-vector.svg">
+        <div class="summary-box recent-alerts">
+            <div class="box-header">
+                Recent Alerts
+                <img src="images/light-icons/open-close-vector.svg">
+            </div>
+            <div class="scroll-area">
+                <table cellspacing="1">
+                    <thead>
+                        <tr>
+                        <th><p>Event</p></th>
+                        <th><p>Time</p></th>
+                        <th><p>Probe</p></th>
+                        <th class="description"><p>Description</p></th>
+                        <th><p>Open Event</p></th>
+                        <th><p>Dismiss</p></th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+
+                        <tr>
+                            <td  class="event-name">Alert</td>
+                            <td>Event Type</td>
+                            <td>12/06/2020</td>
+                            <td>Description</td>
+                            <td class="open-event">
+                                <svg class="export" width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M14.2222 14.2222H1.77778V1.77778H8V0H1.77778C0.791111 0 0 0.8 0 1.77778V14.2222C0 15.2 0.791111 16 1.77778 16H14.2222C15.2 16 16 15.2 16 14.2222V8H14.2222V14.2222ZM9.77778 0V1.77778H12.9689L4.23111 10.5156L5.48444 11.7689L14.2222 3.03111V6.22222H16V0H9.77778Z" fill="#E6E7F2"/>
+                                </svg>
+                            </td>
+                            <td class="dismiss">X</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
         </div>
-        <div class="scroll-area">
-
-        <table cellspacing="1">
-          <thead>
-            <tr>
-                <th class="user-profile"></th>
-                <th><p>Name</p></th>
-                <th><p>Occupation</p></th>
-                <th><p>Access Level</p></th>
-                <th><p>Status</p></th>
-                <th></th>
-            </tr>
-          </thead>
-
-          <tbody>
-            <tr>
-                <td></td>
-                <td>FirstName LastName</td>
-                <td>Electrochemical Engineer</td>
-                <td>Admin</td>
-                <td class="online-status"><p>Online</p></td>
-                <td>
-                    <a href="edit-user.html">View User</a>
-                </td>
-            </tr>
-
-          </tbody>
-        </table>
-      </div>
-
-      </div>
-      <div class="start-new-analysis">
-        <button class="start-button">Start New Analysis</button>
-      </div>
-
-    
 
 
+        <div class="summary-box events">
+            <div class="box-header">
+                Events
+                <img src="images/light-icons/open-close-vector.svg">
+            </div>
+            <div class="scroll-area">
+                <div class="events-input-bar">
+                    <div class="events-selectors">
+                        <select name="" id="label-select">
+                            <option value="label" disabled selected>Label</option>
+                        </select>
+                        <select name="" id="date-name">
+                            <option value="date-name" disabled selected>Date Name</option>
+                        </select>
+                        <label for="created-on">Created On</label>
+                        <select name="" id="created-on">
+                            <option></option>
+                        </select>
+                        <label for="">Start Time</label>
+                        <input class="event-date-input" type="date">
+                        <input class="event-time-input" type="time">
+                        <label for="">End Time</label>
+                        <input class="event-date-input" type="date">
+                        <input class="event-time-input" type="time">
+                    </div>
 
+                    <div class="search-bar-container events-searchbar">
+                        <input type="text" placeholder="Search" class="events-search">
+                        <button type="submit"><img src="images/light-icons/search_magnifying_glass.svg"> </button>
+                    </div>
+                </div>
+                
+
+                <table cellspacing="1">
+                    <thead>
+                        <tr>
+                        <th><p>Event</p></th>
+                        <th><p>Label</p></th>
+                        <th class="events-time"><p>Time</p></th>
+                        <th><p>Probe</p></th>
+                        <th class="file"><p>File</p></th>
+                        <th class="events-icons"><p><span>icons</span></p></th>
+                        </tr>
+                    </thead>
+            
+                    <tbody>
+                        <tr>
+                            <td  class="event-name">Event Name</td>
+                            <td class="label"></td>
+                            <td>12/06/2020 &nbsp;&nbsp;&nbsp;&nbsp; 7:41 AM</td>
+                            <td>Probe</td>
+                            <td>File Name</td>
+                            <td class="icons">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.2222 14.2222H1.77778V1.77778H8V0H1.77778C0.791111 0 0 0.8 0 1.77778V14.2222C0 15.2 0.791111 16 1.77778 16H14.2222C15.2 16 16 15.2 16 14.2222V8H14.2222V14.2222ZM9.77778 0V1.77778H12.9689L4.23111 10.5156L5.48444 11.7689L14.2222 3.03111V6.22222H16V0H9.77778Z" fill="#E6E7F2"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M11.5198 0H0.639988C0.286713 0 0 0.286713 0 0.639988V11.5198C0 11.8731 0.286713 12.1598 0.639988 12.1598H11.5198C11.8731 12.1598 12.1598 11.8731 12.1598 11.5198V0.639988C12.1598 0.286713 11.8731 0 11.5198 0ZM10.8798 10.8798H1.27998V1.27998H10.8798V10.8798Z" fill="#E6E7F2"/>
+                                    <path d="M14.7196 13.12V14.72H13.1196V15.9999H15.3596C15.7129 15.9999 15.9996 15.7132 15.9996 15.36V13.12H14.7196Z" fill="#E6E7F2"/>
+                                    <path d="M11.6414 14.7198H8.19824V15.9998H11.6414V14.7198Z" fill="#E6E7F2"/>
+                                    <path d="M5.12019 14.72V13.12H3.84021V15.36C3.84021 15.7132 4.12692 15.9999 4.4802 15.9999H6.72016V14.72H5.12019Z" fill="#E6E7F2"/>
+                                    <path d="M15.3596 3.83997H13.1196V5.11994H14.7196V6.71991H15.9996V4.47995C15.9996 4.12668 15.7129 3.83997 15.3596 3.83997Z" fill="#E6E7F2"/>
+                                    <path d="M15.9996 8.19843H14.7196V11.6415H15.9996V8.19843Z" fill="#E6E7F2"/>
+                                </svg>
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M2.6666 14.2222C2.6666 15.2 3.4666 16 4.44438 16H11.5555C12.5333 16 13.3333 15.2 13.3333 14.2222V3.55556H2.6666V14.2222ZM14.2222 0.888889H11.111L10.2222 0H5.77771L4.88882 0.888889H1.77771V2.66667H14.2222V0.888889Z" fill="#E6E7F2"/>
+                                </svg>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+                <div class="event-button"><button class="start-button">Create New Event</button></div>
+            </div>
+        </div>
     </div>
 
 </body>

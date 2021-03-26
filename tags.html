@@ -61,8 +61,8 @@
 
     <div class="main-content">
       <div class="header">
-        <a class="header-link" href="events.html">Events</a>
-        <a class="header-link current-page">Labels</a>
+        <a class="header-link" href="data.html">Data</a>
+        <a class="header-link current-page">Tags</a>
       </div>
 
         <div class="summary-box tags">
@@ -113,6 +113,34 @@
                 <div class="tags-button"><button class="start-button">Create Tag</button></div>
             </div>
         </div>
+
+        <div class="pop-up-overlay"></div>
+        <div class="absolute-container"></div>
+        <div class="create-tag-container">
+          <div class="tags-header">
+            <h1>Tag</h1>
+            <span id='close'>X</span>
+          </div>
+          <p>Name</p>
+          <input type="text">
+          <p>Notes</p>
+          <textarea name="Notes" id="tag-notes" cols="30" rows="10"></textarea>
+          <div class="save-tag"><button class="start-button">Save Tag</button></div>
+        </div>
+
+        <div class="pop-up-overlay"></div>
+        <div class="absolute-container"></div>
+        <div class="delete-tag-container">
+          <span>X</span>
+          <p>Are you sure you want to delete this tag?</p>
+          <div class="delete-tag-buttons">
+            <div class="cancel-button"><button class="start-button">Cancel</button></div>
+            <button class="delete-button">Delete</button>
+          </div>
+
+          </div>
+        </div>
+
     </div>
 </body>
 </html>

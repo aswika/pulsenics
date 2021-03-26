@@ -114,8 +114,8 @@
                 Filters
                 <img src="images/light-icons/open-close-vector.svg">
             </div>
-            <div class="scroll-area">
-                <div class="filter-checkboxes">
+            <div class="scroll-area filter-scroll">
+                <div class="filters-checkboxes">
                     <input type="checkbox" id="probe-data">
                     <label for="probe-data">Probe Data</label>
 
@@ -124,35 +124,43 @@
                 </div>
 
                 <div class="filters-text-input">
-                    <div class="filters-input">
+                    <div class="filters-name">
                         <p>Name</p>
                         <input type="text">
                     </div>
 
-                    <div class="filters-input">
+                    <div class="filters-experiment">
                         <p>Experiment</p>
                         <input type="text">
                     </div>
 
-                    <div class="filters-input">
+                    <div class="filters-tag">
                         <p>Tag</p>
                         <input type="text">
                     </div>
-
-                    <div class="filters-input filters-date">
-                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <svg class="clock-icon" width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.99 2C6.47 2 2 6.48 2 12C2 17.52 6.47 22 11.99 22C17.52 22 22 17.52 22 12C22 6.48 17.52 2 11.99 2ZM12 20C7.58 20 4 16.42 4 12C4 7.58 7.58 4 12 4C16.42 4 20 7.58 20 12C20 16.42 16.42 20 12 20Z" fill="#E6E7F2"/>
                             <path d="M12.5 7H11V13L16.25 16.15L17 14.92L12.5 12.25V7Z" fill="#E6E7F2"/>
                             </svg>
-                        <p>Start</p>
-                        <input type="date">
-                        <input type="time">
-                    </div>
-                    <div class="filters-input filters-date">
-                        <p>End</p>
-                        <input type="date">
-                        <input type="time">
-                    </div>
+
+                    
+                        <div class="filters-start">
+                            
+                            <p>Start</p>
+                            <div class="filter-date-input">
+                                <input class="filter-date" type="date">
+                                 <input class="filter-time" type="time">
+                            </div>
+                            
+                        </div>
+                        <div class="filters-end">
+                            <p>End</p>
+                            <div class="filter-date-input">
+                                <input class="filter-date" type="date">
+                                 <input class="filter-time" type="time">
+                            </div>
+                        </div>
+                    
                 </div>
             </div>
         </div>
@@ -206,6 +214,43 @@
                 </table>
             </div>
         </div>
+
+    <div class="pop-up-overlay"></div>
+    <div class="absolute-container"></div>
+    <div class="data-upload-container">
+    <span id='close'>X</span>
+        <div class="data-upload-background">
+        <svg class="upload-icon" width="312" height="312" viewBox="0 0 312 312" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M117 175.758V233.5C117 233.776 116.776 234 116.5 234H59.51C38.9999 234 12.9999 208 12.9999 175.758C12.9999 145.938 35.9077 123.219 64.3689 123.219C74.7815 123.219 81.0291 126.059 81.0291 126.059C93.5242 86.2997 124.068 65 156 65C187.932 65 218.476 86.2997 230.971 126.059C230.971 126.059 237.218 123.219 247.631 123.219C276.092 123.219 299 145.938 299 175.758C299 208 273 234 252.49 234H195.5C195.224 234 195 233.776 195 233.5V175.758H230.409C231.625 175.758 232.176 174.238 231.242 173.459L158.081 104C156.875 102.996 155.125 102.996 153.919 104L80.7584 173.459C79.8243 174.238 80.3747 175.758 81.5906 175.758H117Z" fill="#262845" stroke="#262845"/>
+            </svg>
+        <a>Choose a file </a><p>or drag it here</p> 
+        </div>
+    </div> 
+
+    <div class="pop-up-overlay"></div>
+    <div class="absolute-container"></div>
+    <div class="data-upload-input">
+        <div class="upload-header">
+            <h1>Upload Data</h1><span id='close'>X</span>
+        </div>
+        
+        <div class="upload-input-fields">
+            <p>Name</p>
+            <input class="upload-name" type="text">
+            <p>Tags</p>
+            <textarea name="upload-tags" id="upload-tags" cols="140" rows="5"></textarea>
+            <p>Notes</p>   
+            <textarea name="upload-notes" id="upload-notes" cols="140" rows="5"></textarea>
+        </div>
+
+        <div class="data-upload-buttons">
+            <p>File attached</p>
+            <svg class="upload-check" width="16" height="16" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M10 0C4.48 0 0 4.48 0 10C0 15.52 4.48 20 10 20C15.52 20 20 15.52 20 10C20 4.48 15.52 0 10 0ZM8 15L3 10L4.41 8.59L8 12.17L15.59 4.58L17 6L8 15Z" fill="#E6E7F2"/>
+                </svg>
+            <div class="save-button"><button class="start-button">Save</button></div>
+        </div>
+    </div> 
     </div>
 </body>
 </html>
